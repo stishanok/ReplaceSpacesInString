@@ -4,6 +4,8 @@ namespace Replace
 {
     public static class Replace
     {
+        private const string NEW_TEXT = "%20";
+
         public static string ReplaceSpaces(string str, int length)
         {
             if (str == null)
@@ -16,7 +18,7 @@ namespace Replace
                 throw new ArgumentException();
             }
 
-            return str[..length].Replace(" ", "%20");
+            return str[..length].Replace(" ", NEW_TEXT);
         }
     }
 }
